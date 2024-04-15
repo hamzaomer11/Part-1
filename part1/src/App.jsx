@@ -3,6 +3,7 @@ const App = () => {
     { name: 'Peter', age: 4 },
     { name: 'Maya', age: 10 },
   ]
+  
 
   return (
     <div>
