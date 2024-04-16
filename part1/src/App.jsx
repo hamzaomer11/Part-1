@@ -1,21 +1,12 @@
-const Hello = (props) => {
-
-  console.log(props)
-  return (
-    <div>
-      <p>
-
-        Hello {props.name}, you are {props.age} years old
-      </p>
-    </div>
-  )
-}
-
 const App = () => {
   const friends = [
     { name: 'Peter', age: 4 },
     { name: 'Maya', age: 10 },
   ]
+<<<<<<< HEAD
+=======
+  
+>>>>>>> 708bb5d5cbaf41d19c8cc8dcf7c3ac5f971178b1
 
   return (
     <div>
@@ -25,4 +16,8 @@ const App = () => {
   )
 }
 
+<<<<<<< HEAD
 export default App
+=======
+export default App
+>>>>>>> 708bb5d5cbaf41d19c8cc8dcf7c3ac5f971178b1
