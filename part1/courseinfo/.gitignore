@@ -1,8 +1,2 @@
-*
 
-!*/
 node_modules
-public
-!src/**
-!.gitignore
-!README.md
