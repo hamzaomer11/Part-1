@@ -1,4 +1,2 @@
-
-
-Solutions to the Fullstack-Open exercises.
+Solutions to the Fullstack Open exercises.
 
