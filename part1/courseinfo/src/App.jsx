@@ -9,9 +9,10 @@ const App = () => {
 
   const handleLeftClick = () => {
     setAll(allClicks.concat('L'))
+    console.log('left before', left)
     setLeft(left + 1)
-
-    setTotal(left + right)
+    console.log('left after', left)
+    setTotal(left + right) 
   }
 
   const handleRightClick = () => {
