@@ -65,6 +65,8 @@ export default App
 
 */
 
+/*************************************** Exercise 1.8 ****************************************
+
 import { useState } from 'react'
 
 const App = () => {
@@ -102,3 +104,5 @@ const App = () => {
 }
 
 export default App
+
+*/
