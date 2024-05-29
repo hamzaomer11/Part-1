@@ -69,13 +69,7 @@ export default App
 
 import { useState } from 'react'
 
-const App = () => {
-  // save clicks of each button to its own state
-  const [good, setGood] = useState(0)
-  const [neutral, setNeutral] = useState(0)
-  const [bad, setBad] = useState(0)
-
-  const Statistics = (props) => {
+const Statistics = (props) => {
     return (
       <div>
       <b>good</b> {props.good} <br />
@@ -86,7 +80,13 @@ const App = () => {
       <b>positive</b> {(props.good/(props.good + props.neutral + props.bad)) * 100} %
       </div>
     )
-  }
+}
+
+const App = () => {
+  // save clicks of each button to its own state
+  const [good, setGood] = useState(0)
+  const [neutral, setNeutral] = useState(0)
+  const [bad, setBad] = useState(0)
 
   return (
     <div>
