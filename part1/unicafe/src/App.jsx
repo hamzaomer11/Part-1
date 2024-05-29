@@ -65,8 +65,6 @@ export default App
 
 */
 
-/*************************************** Exercise 1.8 ****************************************
-
 import { useState } from 'react'
 
 const Statistics = (props) => {
@@ -105,4 +103,3 @@ const App = () => {
 
 export default App
 
-*/
