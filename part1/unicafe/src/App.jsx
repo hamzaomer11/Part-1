@@ -156,6 +156,9 @@ export default App
 
 */
 
+/*************************************** Exercise 1.10 ************************************
+
+
 import { useState } from 'react'
 
 const Button = ({ handleClick, text }) => (
@@ -227,3 +230,5 @@ const Statistics = (props) => {
 }
 
 export default App
+
+*/
