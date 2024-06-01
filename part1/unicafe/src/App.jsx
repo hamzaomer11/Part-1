@@ -233,6 +233,8 @@ export default App
 
 */
 
+/************************************** Exercise 1.11 *******************************************
+
 import { useState } from 'react'
 
 const Button = ({ handleClick, text }) => (
@@ -277,7 +279,7 @@ const App = () => {
           </tr>
         </tbody>
       </table>
-      
+
     </div>
   )
 }
@@ -313,3 +315,5 @@ const Statistics = (props) => {
 }
 
 export default App
+
+*/
