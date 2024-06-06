@@ -59,16 +59,16 @@ const App = () => {
     'The only way to go fast, is to go well.'
   ]
    
+  const copy = [...anecdotes]
   const [selected, setSelected] = useState(0)
   const [vote, setVote] = useState(0)
 
   const handleAnecdoteClick = () => {
-    setSelected(Math.floor(Math.random() * anecdotes.length))
+    setSelected(Math.floor(Math.random() * copy.length))
   }
 
-  const copy = [...anecdotes]
-
   const handleVoteClick = () => {
+    Array.apply(null, new Array(vote)).map(Number.prototype.valueOf,selected)
     setVote(vote + 1)
   }
   
