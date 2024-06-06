@@ -47,10 +47,6 @@ const Button = ({ handleClick, text }) => (
   </button>
 )
 
-const copy = [...anecdotes]
-// increment the value in position 2 by one
-copy[2] += 1     
-
 const App = () => {
   const anecdotes = [
     'If it hurts, do it more often.',
@@ -64,16 +60,25 @@ const App = () => {
   ]
    
   const [selected, setSelected] = useState(0)
+  const [vote, setVote] = useState(0)
 
   const handleAnecdoteClick = () => {
     setSelected(Math.floor(Math.random() * anecdotes.length))
   }
 
+  const copy = [...anecdotes]
+
+  const handleVoteClick = () => {
+    setVote(vote + 1)
+  }
+  
+
   return (
     <div>
-      <p>{anecdotes[selected]}</p>
-
-      <Button handleClick={} text={'vote'}/>
+      <p>{copy[selected]}</p>
+      
+      <p>has {vote} votes</p>
+      <Button handleClick={handleVoteClick} text={'vote'}/>
       <Button handleClick={handleAnecdoteClick} text={'next anecdote'}/>
     </div>
   )
