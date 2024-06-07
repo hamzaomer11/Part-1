@@ -39,6 +39,8 @@ export default App
 
 */
 
+/*********************************** Exercise 1.13 ****************************************
+
 import { useState } from 'react'
 
 const Button = ({ handleClick, text }) => (
@@ -86,3 +88,5 @@ const App = () => {
 }
 
 export default App
+
+*/
