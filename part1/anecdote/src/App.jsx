@@ -39,8 +39,6 @@ export default App
 
 */
 
-/************************************* Exercise 1.13 **********************************
-
 import { useState } from 'react'
 
 const Button = ({ handleClick, text }) => (
@@ -61,25 +59,26 @@ const App = () => {
     'The only way to go fast, is to go well.'
   ]
    
-  const copy = [...anecdotes]
-  const [selected, setSelected] = useState(0)
-  const [vote, setVote] = useState(0)
-
-  const handleAnecdoteClick = () => {
-    setSelected(Math.floor(Math.random() * copy.length))
-  }
-
   const handleVoteClick = () => {
-    Array.apply(null, new Array(vote)).map(Number.prototype.valueOf,selected)
-    setVote(vote + 1)
+    const copyVote = [...vote]
+    copyVote[selected] += 1
+    setVote(copyVote)
   }
+
+  const [selected, setSelected] = useState(0)
+  const [vote, setVote] = useState([0,0,0,0,0,0,0,0]) //assign zero-filled array to 'vote' variable
+
   
+  const handleAnecdoteClick = () => {
+    const randomAnecdote = (Math.floor(Math.random() * anecdotes.length))
+    setSelected(randomAnecdote)
+  }
 
   return (
     <div>
-      <p>{copy[selected]}</p>
+      <p>{anecdotes[selected]}</p>
       
-      <p>has {vote} votes</p>
+      <p>has {vote[selected]} votes</p>
       <Button handleClick={handleVoteClick} text={'vote'}/>
       <Button handleClick={handleAnecdoteClick} text={'next anecdote'}/>
     </div>
@@ -87,6 +86,3 @@ const App = () => {
 }
 
 export default App
-
-*/
-
