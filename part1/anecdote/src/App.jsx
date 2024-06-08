@@ -126,7 +126,7 @@ const App = () => {
     setVote(copyVote)
     console.log(copyVote, 'New copyVote')
     //Updated copyVote array assigned back to 'vote' variable, replacing initial empty array.
-    var maximumVote = Math.max(copyVote[selected])
+    var maximumVote = Math.max(...copyVote)
     setMaxVote(maximumVote)
     console.log(maximumVote, anecdotes[selected])
     
