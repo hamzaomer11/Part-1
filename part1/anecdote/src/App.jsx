@@ -116,7 +116,7 @@ const App = () => {
   const [maxVote, setMaxVote] = useState(0)
 
   console.log(selected, 'This is selected')
-  console.log(maxVote, 'This is maximum vote')
+  console.log(maxVote, 'This is maximum vote of array')
   
   const handleVoteClick = () => {
     const copyVote = [...vote]
@@ -128,9 +128,18 @@ const App = () => {
     //Updated copyVote array assigned back to 'vote' variable, replacing initial empty array.
     var maximumVote = Math.max(...copyVote)
     setMaxVote(maximumVote)
-    //assign maximum value from 'copyVote' array to 'maxVote' variable
-    console.log(maximumVote, anecdotes[selected])
-    
+    //assigns maximum value from 'copyVote' array to 'maxVote' variable
+    console.log(copyVote[selected], anecdotes[selected])
+    /* if(maxVote != 0) {
+      return (
+        <div>
+          <h2>Anecdote with most vote</h2>
+
+          <p>{anecdotes[selected]}</p>
+          <p></p>
+        </div>
+      )
+    } */
   }
 
   const handleAnecdoteClick = () => {
