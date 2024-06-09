@@ -91,6 +91,8 @@ export default App
 
 */
 
+/************************************** Exercise 1.14 ******************************************
+
 import { useState } from 'react'
 
 const Button = ({ handleClick, text }) => (
@@ -175,3 +177,4 @@ const MostVotes = (props) => {
 
 export default App
 
+*/
