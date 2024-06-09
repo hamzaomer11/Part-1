@@ -114,12 +114,12 @@ const App = () => {
   const [selected, setSelected] = useState(0)
   const [vote, setVote] = useState(Array.apply(null, new Array(8)).map(Number.prototype.valueOf,0)) //assign zero-filled array to 'vote' variable
   const [maxVote, setMaxVote] = useState(0)
+  const copyVote = [...vote]
 
   console.log(selected, 'This is selected')
   console.log(maxVote, 'This is maximum vote of array')
   
   const handleVoteClick = () => {
-    const copyVote = [...vote]
     //empty 'vote' array is duplicated over to 'copyVote' variable
     copyVote[selected] += 1
     //value of 'selected' is 0 initially. Value @ index is incremented by 1.
@@ -130,17 +130,9 @@ const App = () => {
     setMaxVote(maximumVote)
     //assigns maximum value from 'copyVote' array to 'maxVote' variable
     console.log(copyVote[selected], anecdotes[selected])
-    /* if(maxVote != 0) {
-      return (
-        <div>
-          <h2>Anecdote with most vote</h2>
-
-          <p>{anecdotes[selected]}</p>
-          <p></p>
-        </div>
-      )
-    } */
   }
+
+  let mostVotesAnecedote = copyVote.indexOf(maxVote)
 
   const handleAnecdoteClick = () => {
     const copyAnecdote = [...anecdotes]
@@ -157,10 +149,29 @@ const App = () => {
       <Button handleClick={handleVoteClick} text={'vote'}/>
       <Button handleClick={handleAnecdoteClick} text={'next anecdote'}/>
 
+      <MostVotes maxVote={maxVote} anecdotes={anecdotes} mostVotesAnecedote={mostVotesAnecedote}/>
     </div>
   )
 }
 
+const MostVotes = (props) => {
+  if(props.maxVote === 0) {
+    return (
+      <div>
+
+      </div>
+    )
+  } else {
+    return (
+      <div>
+        <h2>Anecdote with most votes</h2>
+
+        <p>{props.anecdotes[props.mostVotesAnecedote]}</p>
+        <p>has {props.maxVote} votes</p>
+      </div>
+    )
+  }
+}
 
 export default App
 
